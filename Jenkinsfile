@@ -1,19 +1,19 @@
 pipeline {
     agent any
     
-    node(' deploying node app '){
-        stages{
-            stage(" install "){
-                echo "Installing node project"
-                sh 'npm install'
-            },
-            stage(" build "){
+    
+    stages{
+        stage(" install "){
+            echo "Installing node project"
+            sh 'npm install'
+        },
+        stage(" build "){
 
-            },
-            stage(" run "){
-                echo "running node project"
-                sh 'node src/index.js'
-            }
+        },
+        stage(" run "){
+            echo "running node project"
+            sh 'node src/index.js'
         }
     }
+    
 }
